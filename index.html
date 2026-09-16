@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Voice World</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b0b12;
+            color: white;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            background: #151522;
+            border-bottom: 1px solid #29293a;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        header p {
+            margin-top: 8px;
+            color: #aaa;
+        }
+
+        .container {
+            padding: 25px 18px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .welcome {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .welcome h2 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .characters {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 18px;
+        }
+
+        .character {
+            background: #171722;
+            border: 1px solid #29293a;
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            transition: 0.2s;
+        }
+
+        .character:hover {
+            transform: translateY(-4px);
+            border-color: #7c4dff;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            border-radius: 50%;
+            background: #29293a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 45px;
+        }
+
+        .character h3 {
+            margin-top: 15px;
+        }
+
+        .character p {
+            color: #aaa;
+            font-size: 14px;
+            margin-top: 6px;
+        }
+
+        .chat-btn {
+            margin-top: 15px;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 20px;
+            background: #7c4dff;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .chat-btn:hover {
+            background: #956eff;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌸 Anime Voice World</h1>
+    <p>Chat • Talk • Create • Imagine</p>
+</header>
+
+<div class="container">
+
+    <div class="welcome">
+        <h2>Choose your character</h2>
+        <p>Start a conversation with an AI character.</p>
+    </div>
+
+    <div class="characters">
+
+        <div class="character">
+            <div class="avatar">⚔️</div>
+            <h3>Yuriko</h3>
+            <p>Calm • Friendly • Samurai</p>
+            <button class="chat-btn">Chat</button>
+        </div>
+
+        <div class="character">
+            <div class="avatar">🔥</div>
+            <h3>Akira</h3>
+            <p>Energetic • Brave • Adventurer</p>
+            <button class="chat-btn">Chat</button>
+        </div>
+
+        <div class="character">
+            <div class="avatar">🌙</div>
+            <h3>Hana</h3>
+            <p>Kind • Mysterious • Magical</p>
+            <button class="chat-btn">Chat</button>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
