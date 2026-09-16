@@ -14,98 +14,105 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #09090f;
+    background: #0b0b12;
     color: white;
     min-height: 100vh;
 }
 
 header {
-    padding: 22px;
     text-align: center;
-    background: #151520;
-    border-bottom: 1px solid #29293a;
+    padding: 30px 15px;
+    background: #151421;
+    border-bottom: 1px solid #333;
 }
 
 header h1 {
-    font-size: 28px;
+    font-size: 32px;
 }
 
 header p {
     color: #aaa;
-    margin-top: 7px;
+    margin-top: 10px;
+    font-size: 18px;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
-    padding: 25px 18px;
+    padding: 35px 20px;
 }
 
-.welcome {
+.title {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
-.welcome h2 {
-    margin-bottom: 8px;
+.title h2 {
+    font-size: 30px;
 }
 
-.welcome p {
-    color: #999;
+.title p {
+    color: #aaa;
+    margin-top: 10px;
 }
 
 .characters {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
 }
 
-.character {
-    background: #171722;
-    border: 1px solid #29293a;
-    border-radius: 18px;
-    padding: 20px;
+.card {
+    background: #181722;
+    border: 1px solid #302e3e;
+    border-radius: 20px;
+    padding: 25px;
     text-align: center;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #8b4cff;
 }
 
 .avatar {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     margin: auto;
     border-radius: 50%;
-    background: #29293a;
+    background: #29283c;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 45px;
+    font-size: 65px;
 }
 
-.character h3 {
-    margin-top: 15px;
+.card h3 {
+    margin-top: 20px;
+    font-size: 25px;
 }
 
-.character p {
-    color: #999;
-    font-size: 14px;
-    margin-top: 6px;
+.card p {
+    color: #aaa;
+    margin: 10px 0 20px;
 }
 
-.chat-btn {
-    margin-top: 15px;
-    padding: 10px 22px;
+button {
     border: none;
-    border-radius: 22px;
-    background: #7c4dff;
+    background: #8b45ff;
     color: white;
-    font-weight: bold;
+    padding: 13px 28px;
+    border-radius: 30px;
+    font-size: 16px;
     cursor: pointer;
 }
 
-.chat-btn:hover {
-    background: #956eff;
+button:hover {
+    background: #a56aff;
 }
 
-/* CHAT */
+/* CHAT SCREEN */
 
 #chatScreen {
     display: none;
@@ -113,103 +120,98 @@ header p {
     flex-direction: column;
 }
 
-.chat-header {
-    padding: 16px;
-    background: #151520;
-    border-bottom: 1px solid #29293a;
+.chatHeader {
+    padding: 18px;
+    background: #151421;
+    border-bottom: 1px solid #333;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
 }
 
-.back-btn {
-    background: #29293a;
-    color: white;
-    border: none;
-    padding: 9px 13px;
-    border-radius: 10px;
-    cursor: pointer;
+.backButton {
+    background: #29283a;
+    padding: 10px 16px;
 }
 
-.chat-avatar {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background: #29293a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-}
-
-.chat-name {
+.chatCharacter {
+    font-size: 24px;
     font-weight: bold;
-}
-
-.chat-status {
-    color: #7cff9b;
-    font-size: 12px;
-    margin-top: 3px;
 }
 
 .messages {
     flex: 1;
     overflow-y: auto;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    max-width: 900px;
+    width: 100%;
+    margin: auto;
 }
 
 .message {
+    padding: 13px 16px;
+    margin: 10px 0;
+    border-radius: 15px;
     max-width: 80%;
-    padding: 12px 15px;
-    border-radius: 16px;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .bot {
-    align-self: flex-start;
-    background: #20202d;
+    background: #252437;
+    margin-right: auto;
 }
 
 .user {
-    align-self: flex-end;
-    background: #6741d9;
+    background: #713dcc;
+    margin-left: auto;
 }
 
-.input-area {
-    padding: 12px;
-    background: #151520;
+.chatInput {
+    padding: 15px;
+    background: #151421;
+    border-top: 1px solid #333;
     display: flex;
-    gap: 8px;
+    gap: 10px;
 }
 
-.input-area input {
+.chatInput input {
     flex: 1;
-    padding: 13px;
-    border-radius: 22px;
-    border: 1px solid #35354a;
-    background: #0d0d14;
+    padding: 14px;
+    border-radius: 25px;
+    border: 1px solid #444;
+    background: #22212d;
     color: white;
     outline: none;
 }
 
-.send-btn {
-    width: 48px;
-    border: none;
-    border-radius: 50%;
-    background: #7c4dff;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
+.send {
+    padding: 12px 22px;
+}
+
+.voice {
+    background: #333246;
+    padding: 12px 17px;
+}
+
+@media(max-width:600px) {
+    header h1 {
+        font-size: 27px;
+    }
+
+    .title h2 {
+        font-size: 25px;
+    }
+
+    .message {
+        max-width: 90%;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HOME -->
+<!-- HOME PAGE -->
 
 <div id="homeScreen">
 
@@ -220,177 +222,266 @@ header p {
 
 <div class="container">
 
-<div class="welcome">
+<div class="title">
     <h2>Choose your character</h2>
-    <p>Start your conversation</p>
+    <p>Start a conversation with an AI character.</p>
 </div>
 
 <div class="characters">
 
-<div class="character">
-    <div class="avatar">⚔️</div>
-    <h3>Yuriko</h3>
-    <p>Calm • Friendly • Samurai</p>
-    <button class="chat-btn"
-        onclick="openChat('Yuriko','⚔️')">
-        Chat
-    </button>
+    <!-- YURIKO -->
+
+    <div class="card">
+        <div class="avatar">⚔️</div>
+        <h3>Yuriko</h3>
+        <p>Calm • Friendly • Samurai</p>
+
+        <button onclick="openChat('Yuriko')">
+            Chat
+        </button>
+    </div>
+
+    <!-- AKIRA -->
+
+    <div class="card">
+        <div class="avatar">🔥</div>
+        <h3>Akira</h3>
+        <p>Energetic • Brave • Adventurer</p>
+
+        <button onclick="openChat('Akira')">
+            Chat
+        </button>
+    </div>
+
+    <!-- HANA -->
+
+    <div class="card">
+        <div class="avatar">🌙</div>
+        <h3>Hana</h3>
+        <p>Kind • Mysterious • Magical</p>
+
+        <button onclick="openChat('Hana')">
+            Chat
+        </button>
+    </div>
+
 </div>
 
-<div class="character">
-    <div class="avatar">🔥</div>
-    <h3>Akira</h3>
-    <p>Energetic • Brave • Adventurer</p>
-    <button class="chat-btn"
-        onclick="openChat('Akira','🔥')">
-        Chat
-    </button>
-</div>
-
-<div class="character">
-    <div class="avatar">🌙</div>
-    <h3>Hana</h3>
-    <p>Kind • Mysterious • Magical</p>
-    <button class="chat-btn"
-        onclick="openChat('Hana','🌙')">
-        Chat
-    </button>
-</div>
-
-</div>
 </div>
 </div>
 
 
-<!-- CHAT -->
+<!-- CHAT PAGE -->
 
 <div id="chatScreen">
 
-<div class="chat-header">
+    <div class="chatHeader">
 
-<button class="back-btn" onclick="goHome()">
-    ←
-</button>
+        <button class="backButton" onclick="goHome()">
+            ← Back
+        </button>
 
-<div class="chat-avatar" id="chatAvatar">⚔️</div>
+        <div id="characterIcon">⚔️</div>
 
-<div>
-    <div class="chat-name" id="chatName">Yuriko</div>
-    <div class="chat-status">● Online</div>
-</div>
+        <div class="chatCharacter" id="characterName">
+            Yuriko
+        </div>
 
-</div>
+    </div>
 
-<div class="messages" id="messages"></div>
+    <div class="messages" id="messages">
 
-<div class="input-area">
+        <div class="message bot" id="welcomeMessage">
+            Hello! 👋 I'm Yuriko. What would you like to talk about?
+        </div>
 
-<input
-    id="messageInput"
-    type="text"
-    placeholder="Message your character..."
-    onkeydown="handleEnter(event)"
->
+    </div>
 
-<button class="send-btn" onclick="sendMessage()">
-    ➤
-</button>
+    <div class="chatInput">
 
-</div>
+        <button class="voice" onclick="speakLastMessage()">
+            🔊
+        </button>
+
+        <input
+            id="messageInput"
+            type="text"
+            placeholder="Type a message..."
+            onkeydown="handleEnter(event)"
+        >
+
+        <button class="send" onclick="sendMessage()">
+            Send
+        </button>
+
+    </div>
 
 </div>
 
 
 <script>
 
-let currentCharacter = "";
+let currentCharacter = "Yuriko";
 
-const personalities = {
-    Yuriko: "Stay calm and friendly. You are a samurai named Yuriko.",
-    Akira: "Be energetic, brave and adventurous. You are an adventurer named Akira.",
-    Hana: "Be kind, mysterious and magical. You are Hana."
+const characterData = {
+
+    Yuriko: {
+        icon: "⚔️",
+        greeting:
+        "Hello! 👋 I'm Yuriko. What would you like to talk about?",
+        replies: [
+            "Interesting! Tell me more. ⚔️",
+            "I understand. Let's continue our conversation.",
+            "That's an interesting question!",
+            "Hmm... let me think about that.",
+            "I'm listening. What happens next?"
+        ]
+    },
+
+    Akira: {
+        icon: "🔥",
+        greeting:
+        "Yo! 🔥 I'm Akira! Ready for an adventure?",
+        replies: [
+            "That's awesome! 🔥",
+            "Haha! Let's go!",
+            "Interesting! Tell me everything!",
+            "Now THAT sounds exciting!",
+            "I'm ready! What's next?"
+        ]
+    },
+
+    Hana: {
+        icon: "🌙",
+        greeting:
+        "Hello... 🌙 I'm Hana. It's nice to meet you.",
+        replies: [
+            "That sounds interesting... 🌙",
+            "Tell me more about it.",
+            "Hmm... perhaps there is more to this story.",
+            "I understand.",
+            "Let's keep talking."
+        ]
+    }
+
 };
 
-function openChat(name, emoji) {
 
-    currentCharacter = name;
+function openChat(character) {
+
+    currentCharacter = character;
 
     document.getElementById("homeScreen").style.display = "none";
+
     document.getElementById("chatScreen").style.display = "flex";
 
-    document.getElementById("chatName").textContent = name;
-    document.getElementById("chatAvatar").textContent = emoji;
+    document.getElementById("characterName").textContent =
+        character;
+
+    document.getElementById("characterIcon").textContent =
+        characterData[character].icon;
 
     const messages = document.getElementById("messages");
+
     messages.innerHTML = "";
 
     addMessage(
-        "bot",
-        "Hello! I'm " + name + ". 😊 What would you like to talk about?"
+        characterData[character].greeting,
+        "bot"
     );
 
-    document.getElementById("messageInput").focus();
 }
+
 
 function goHome() {
 
     document.getElementById("chatScreen").style.display = "none";
+
     document.getElementById("homeScreen").style.display = "block";
+
 }
 
-function addMessage(type, text) {
 
-    const messages = document.getElementById("messages");
+function addMessage(text, type) {
 
-    const message = document.createElement("div");
+    const messages =
+        document.getElementById("messages");
 
-    message.className = "message " + type;
+    const message =
+        document.createElement("div");
+
+    message.className =
+        "message " + type;
 
     message.textContent = text;
 
     messages.appendChild(message);
 
-    messages.scrollTop = messages.scrollHeight;
+    messages.scrollTop =
+        messages.scrollHeight;
+
 }
+
 
 function sendMessage() {
 
-    const input = document.getElementById("messageInput");
+    const input =
+        document.getElementById("messageInput");
 
-    const text = input.value.trim();
+    const text =
+        input.value.trim();
 
     if (!text) return;
 
-    addMessage("user", text);
+    addMessage(text, "user");
 
     input.value = "";
 
     setTimeout(function() {
 
-        let reply;
+        const replies =
+            characterData[currentCharacter].replies;
 
-        if (currentCharacter === "Yuriko") {
-            reply = "Hmm... I understand. Tell me more. ⚔️";
-        }
+        const reply =
+            replies[Math.floor(Math.random() * replies.length)];
 
-        else if (currentCharacter === "Akira") {
-            reply = "That sounds awesome! 🔥 What should we do next?";
-        }
+        addMessage(reply, "bot");
 
-        else {
-            reply = "Interesting... ✨ Perhaps there is more to this story.";
-        }
+    }, 600);
 
-        addMessage("bot", reply);
-
-    }, 700);
 }
+
 
 function handleEnter(event) {
 
     if (event.key === "Enter") {
         sendMessage();
     }
+
+}
+
+
+function speakLastMessage() {
+
+    const messages =
+        document.querySelectorAll(".message.bot");
+
+    if (messages.length === 0) return;
+
+    const last =
+        messages[messages.length - 1];
+
+    const speech =
+        new SpeechSynthesisUtterance(
+            last.textContent
+        );
+
+    speech.rate = 1;
+
+    speech.pitch = 1;
+
+    window.speechSynthesis.speak(speech);
+
 }
 
 </script>
